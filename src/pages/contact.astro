@@ -1,0 +1,67 @@
+---
+import Layout from "@layouts/Layout.astro";
+import "../styles/global.css";
+---
+
+<Layout>
+  <section class="py-16">
+    <h1 class="text-2xl font-semibold text-[#0e141b] mb-2">Contact</h1>
+    <p class="text-sm text-gray-500 mb-12">Don't be a stranger — drop me a line.</p>
+
+    <div class="grid sm:grid-cols-2 gap-12">
+      <div class="space-y-6">
+        {[
+          { label: "Email", value: "sidharth.mohal@gmail.com", href: "mailto:sidharth.mohal@gmail.com" },
+          { label: "LinkedIn", value: "linkedin.com/in/sidimohal", href: "https://linkedin.com/in/sidimohal" },
+          { label: "Newsletter", value: "inSIDIous — monthly", href: "mailto:sidharth.mohal@gmail.com?subject=Subscribe to inSIDIous" },
+        ].map((item) => (
+          <div>
+            <p class="text-xs text-gray-400 uppercase tracking-widest mb-1">{item.label}</p>
+            <a href={item.href} target="_blank" class="text-sm text-[#0e141b] hover:text-gray-500 transition-colors">
+              {item.value}
+            </a>
+          </div>
+        ))}
+      </div>
+
+      <div class="bg-gray-50 rounded-lg p-6">
+        <h2 class="text-sm font-medium text-[#0e141b] mb-5">Send a message</h2>
+        <div class="space-y-4" id="contact-form">
+          <div>
+            <label class="text-xs text-gray-500 block mb-1">Name</label>
+            <input id="name" type="text" placeholder="your name" class="w-full text-sm border border-gray-200 rounded-md px-3 py-2 outline-none focus:border-gray-400 bg-white transition-colors" />
+          </div>
+          <div>
+            <label class="text-xs text-gray-500 block mb-1">Email</label>
+            <input id="email" type="email" placeholder="your@email.com" class="w-full text-sm border border-gray-200 rounded-md px-3 py-2 outline-none focus:border-gray-400 bg-white transition-colors" />
+          </div>
+          <div>
+            <label class="text-xs text-gray-500 block mb-1">Message</label>
+            <textarea id="message" placeholder="your message..." rows="4" class="w-full text-sm border border-gray-200 rounded-md px-3 py-2 outline-none focus:border-gray-400 bg-white transition-colors resize-none"></textarea>
+          </div>
+          <button
+            id="send-btn"
+            class="w-full bg-[#0e141b] text-white text-sm py-2.5 rounded-md hover:opacity-80 transition-opacity"
+          >
+            Send message
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<script>
+  const btn = document.getElementById("send-btn");
+  btn?.addEventListener("click", () => {
+    const name = (document.getElementById("name") as HTMLInputElement).value.trim();
+    const email = (document.getElementById("email") as HTMLInputElement).value.trim();
+    const message = (document.getElementById("message") as HTMLTextAreaElement).value.trim();
+    if (!name || !email || !message) {
+      btn.textContent = "Fill in all fields";
+      setTimeout(() => btn.textContent = "Send message", 2000);
+      return;
+    }
+    window.location.href = `mailto:sidharth.mohal@gmail.com?subject=Message from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}%0A%0AFrom: ${encodeURIComponent(email)}`;
+  });
+</script>
