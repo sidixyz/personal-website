@@ -1,98 +1,107 @@
 import type { SiteConfig, SiteContent } from "../types";
 
 export const SITE_CONFIG: SiteConfig = {
-  title: "Alejandro Múnez — Mobile & Web Developer",
-  author: "Alejandro Múnez Cuntez",
+  title: "Sidi Mohal — Student & Builder",
+  author: "Sidi Mohal",
   description:
-    "Software Engineer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
+    "Grade 10 IB student in Caledon, Ontario. Building at the intersection of neurotechnology, entrepreneurship, and leadership.",
   lang: "en",
-  siteLogo: "/alejandro-small.jpg",
+  siteLogo: "/sidi-small.jpg",
   navLinks: [
     { text: "Experience", href: "#experience" },
     { text: "Projects", href: "#projects" },
     { text: "About", href: "#about" },
   ],
   socialLinks: [
-    { text: "Twitter", href: "https://github.com/immois/astro-zen" },
-    { text: "LinkedIn", href: "https://github.com/immois/astro-zen" },
-    { text: "Github", href: "https://github.com/immois/astro-zen" },
-    { text: "Youtube", href: "https://github.com/immois/astro-zen" },
-    { text: "Dribbble", href: "https://github.com/immois/astro-zen" },
+    { text: "LinkedIn", href: "https://linkedin.com/in/sidimohal" },
+    { text: "Email", href: "mailto:sidharth.mohal@gmail.com" },
   ],
   socialImage: "/zen-og.png",
-  canonicalURL: "https://astro-zen.vercel.app",
+  canonicalURL: "https://sidi.one",
 };
 
 export const SITE_CONTENT: SiteContent = {
   hero: {
-    name: "Alejandro Múnez",
-    specialty: "Mobile & Web Developer",
+    name: "Sidi Mohal",
+    specialty: "Student & Builder",
     summary:
-      "Developer based in San Francisco, USA. I specialize in UI design, web and mobile application development and maintenance.",
-    email: "example@email.com",
+      "Grade 10 IB student in Caledon, Ontario. Building at the intersection of neurotechnology, entrepreneurship, and leadership.",
+    email: "sidharth.mohal@gmail.com",
   },
   experience: [
     {
-      company: "Zalmart",
-      position: "Lead Android Developer",
-      startDate: "May 2018",
-      endDate: "Sept 2020",
+      company: "The Knowledge Society (TKS)",
+      position: "Velocity Member — Top 7% Globally",
+      startDate: "Sept 2024",
+      endDate: "Present",
       summary: [
-        "Implemented advanced memory management and code optimization techniques, resulting in a reduction in application load time by 40% and a decrease in crashes by 25%. This significantly improved user experience and increased user retention by 20%.",
-        "I led a team of developers in building and integrating new features using Jetpack Android components such as LiveData and ViewModel. This enabled us to build scalable and maintainable applications, reducing the crash rate by 20% and speeding up the time to delivery of new features by 15%.",
-        "Integrated Google Pay for in-app purchases, resulting in a 35% increase in mobile transaction revenue. Additionally, implemented Firebase Analytics to gain insights into user behavior, enabling data-driven optimizations and a 30% increase in user retention.",
+        "Held Velocity status — awarded to the top 7% of TKS members globally across cohorts in San Francisco, New York, Dubai, and Toronto.",
+        "Placed Top 5 in Toronto and Top 19 globally in the TKS × Lovable Consulting Challenge, competing against hundreds of teams worldwide.",
       ],
     },
     {
-      company: "Bankit",
-      position: "Mobile Developer",
-      startDate: "Feb 2017",
-      endDate: "May 2018",
+      company: "Mayfield Secondary School — DECA",
+      position: "VP of Training",
+      startDate: "Sept 2024",
+      endDate: "Present",
       summary: [
-        "I designed and developed a mobile application using Flutter, allowing it to be deployed on both Android and iOS with a single codebase. This reduced development time by 50% and maintenance costs by 30%, facilitating a consistent user experience on both platforms.",
-        "I integrated biometric authentication and data encryption, significantly improving the security of user data. This implementation resulted in a 40% increase in user trust and a 25% reduction in unauthorized access attempts.",
+        "Youngest person ever appointed VP of Training in Mayfield DECA's history.",
+        "Competed at DECA Provincials 2026 in Hotel & Lodging Management, placing Top 20 in all of Ontario.",
       ],
     },
     {
-      company: "Driveer",
-      position: "Frontend Developer",
-      startDate: "Jun 2015",
-      endDate: "Oct 2016",
+      company: "Canadian National Leadership Conference",
+      position: "Organizer",
+      startDate: "Jan 2025",
+      endDate: "Mar 2025",
       summary:
-        "Developed and integrated a real-time vehicle tracking system using WebSockets, improving accuracy and data update in the application. This functionality increased user satisfaction by 30% and reduced customer service inquiries by 25%.",
+        "Organized Canada's largest student-led business conference, bringing together 2,400 high school students in downtown Toronto.",
+    },
+    {
+      company: "TEDx Peel District School Board",
+      position: "Speaker",
+      startDate: "Apr 2026",
+      endDate: "Apr 2026",
+      summary: [
+        "Selected as one of 12 speakers from 250+ applicants across the Peel Region — the second largest school board in Canada.",
+        "Cold-messaged the organizer on LinkedIn two months after the application deadline. She said yes to a last-minute audition. I got selected.",
+      ],
     },
   ],
   projects: [
     {
-      name: "Spotifu Music",
-      summary: "A music streaming app that emulates Spotify's core features.",
-      linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/spotifu.png",
+      name: "Zenn — Stress-Detection Bracelet",
+      summary:
+        "Smart wearable using haptic vibrations and transcutaneous median nerve stimulation at acupressure points PC5/PC6 to automatically activate the parasympathetic nervous system. Built at TKS Hackathon.",
+      linkPreview: "https://sidi.one",
+      linkSource: "https://github.com/sidixyz",
+      image: "/zenn.png",
     },
     {
-      name: "Shopp App",
-      summary: "An e-commerce platform that replicates Shopify's key features.",
-      linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/shopify-clon.png",
+      name: "TKS × Lovable Consulting Challenge",
+      summary:
+        "Top 5 in Toronto, Top 19 globally. Built a 25-slide consulting deck on organic customer acquisition via Generative Engine Optimization — reviewed directly by Lovable executives.",
+      linkPreview: "https://sidi.one",
+      linkSource: "https://github.com/sidixyz",
+      image: "/lovable.png",
     },
     {
-      name: "ClonTagram",
-      summary: "A social network that replicates the features of Instagram",
-      linkPreview: "/",
-      linkSource: "https://github.com/immois/astro-zen",
-      image: "/clone-ig.png",
+      name: "inSIDIous Newsletter",
+      summary:
+        "A monthly newsletter where I slow down to reflect on what I'm building, learning, and experiencing. Writing is how I process growth.",
+      linkPreview: "mailto:sidharth.mohal@gmail.com",
+      linkSource: "https://sidi.one",
+      image: "/newsletter.png",
     },
   ],
   about: {
     description: `
-      Hi, I’m Alejandro Múnez, a passionate Mobile and Web Developer with a knack for crafting seamless digital experiences. With a strong background in both Android and iOS development, as well as front-end web technologies, I thrive in the intersection where creativity meets technology.
+      I'm a 16-year-old student in Caledon, Ontario — IB Diploma, Grade 10, maintaining a 97.75% average while doing way too many things at once.
 
-      Over the years, I’ve honed my skills in building robust, user-friendly applications that not only meet the needs of users but also push the boundaries of what’s possible. My projects range from innovative mobile applications to responsive web designs, all with a focus on performance, security, and scalability.
+      I got obsessed with neurotechnology and brain-computer interfaces after realizing how little we understand about the brain and how much is possible. I hold Velocity status at TKS (top 7% globally), competed at DECA Provincials placing Top 20 in Ontario, organized a 2,400-student national conference, and got selected for a TEDx Talk after cold-messaging the organizer two months after the deadline.
+
+      I'm a first-degree taekwondo black belt, up at 5 AM every day, and I write a monthly newsletter called inSIDIous. I'm building toward something big — still figuring out exactly what that is.
     `,
-    image: "/alejandro-big.jpg",
+    image: "/sidi-big.jpg",
   },
 };
-
-// #5755ff
