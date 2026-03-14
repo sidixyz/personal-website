@@ -1,17 +1,45 @@
 ---
-import { SITE_CONTENT } from "@config";
-import Hero from "@components/Hero.astro";
 import Layout from "@layouts/Layout.astro";
-import Experience from "@components/Experience.astro";
-import Projects from "@components/Projects.astro";
-import About from "@components/About.astro";
-
 import "../styles/global.css";
 ---
 
 <Layout>
-  <Hero {...SITE_CONTENT.hero} />
-  <Experience experience={SITE_CONTENT.experience} />
-  <Projects projects={SITE_CONTENT.projects} />
-  <About {...SITE_CONTENT.about} name={SITE_CONTENT.hero.name} />
+  <section class="py-16">
+    <div class="flex flex-col sm:flex-row gap-10 items-start">
+      <img
+        src="/sidi.jpg"
+        alt="Sidi Mohal"
+        class="w-36 h-44 object-cover rounded-md flex-shrink-0"
+      />
+      <div>
+        <h1 class="text-2xl font-semibold text-[#0e141b] mb-1">Sidi Mohal</h1>
+        <p class="text-gray-500 text-sm mb-5">Caledon, Ontario · Grade 10</p>
+        <p class="text-sm text-gray-700 leading-relaxed mb-3">
+          I'm a 16-year-old student obsessed with neurotechnology, entrepreneurship, and leadership. I hold Velocity status at TKS (top 7% globally), placed Top 20 in Ontario at DECA Provincials, organized a 2,400-student national conference, and got selected for a TEDx Talk after cold-messaging the organizer two months after the deadline.
+        </p>
+        <p class="text-sm text-gray-700 leading-relaxed">
+          I write a monthly newsletter called <em>inSIDIous</em> and I'm building toward something big — still figuring out exactly what that is.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-12">
+      <h2 class="text-xs font-medium text-gray-400 uppercase tracking-widest mb-4">Random stuff</h2>
+      <ul class="space-y-2">
+        {[
+          "1st degree taekwondo black belt — I also instruct kids",
+          "Up at 5 AM every day (yes, really)",
+          "IB Diploma — HL Business, Chemistry, English",
+          "97.75% average somehow",
+          "Toronto sports fan (Raptors, Leafs, Jays)",
+          "Mensa Canada — 99th percentile",
+        ].map((item) => (
+          <li class="flex items-baseline gap-2 text-sm text-gray-600">
+            <span class="text-gray-300">·</span>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
 </Layout>
