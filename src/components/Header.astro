@@ -1,8 +1,4 @@
 ---
-import type { HeaderProps } from "@types";
-
-type Props = Omit<HeaderProps, "siteLogo">;
-
 const { navLinks } = Astro.props;
 const currentPath = Astro.url?.pathname ?? "/";
 ---
@@ -11,25 +7,18 @@ const currentPath = Astro.url?.pathname ?? "/";
   <a href="/" class="font-medium text-[#0e141b] text-sm tracking-tight">
     Sidi Mohal
   </a>
-
   <nav id="main-menu">
     <ul class="flex gap-1">
-      {
-        navLinks.map((link) => (
-          <li>
-            
-              class={`block px-3 py-1.5 text-sm rounded-md transition-all duration-200 ${
-                currentPath === link.href
-                  ? "text-[#0e141b] font-medium"
-                  : "text-gray-500 hover:text-[#0e141b]"
-              }`}
-              href={link.href}
-            >
-              {link.text}
-            </a>
-          </li>
-        ))
-      }
+      {navLinks.map((link: { text: string; href: string }) => (
+        <li>
+          
+            class={`block px-3 py-1.5 text-sm rounded-md transition-all duration-200 ${currentPath === link.href ? "text-[#0e141b] font-medium" : "text-gray-500 hover:text-[#0e141b]"}`}
+            href={link.href}
+          >
+            {link.text}
+          </a>
+        </li>
+      ))}
     </ul>
   </nav>
 </header>
