@@ -1,27 +1,21 @@
 ---
-import type { SiteConfig } from "@types";
-
-type Props = Pick<SiteConfig, "author" | "socialLinks">;
-
 const { author, socialLinks } = Astro.props;
 const currentYear = new Date().getFullYear();
 ---
 
 <footer class="w-full border-t border-gray-100 px-5 pt-5 pb-8 text-center mt-16">
   <ul class="mb-4 flex flex-wrap justify-center gap-x-2 text-xs">
-    {
-      socialLinks.map(({ text, href }) => (
-        <li>
-          
-            href={href}
-            target="_blank"
-            class="inline-block px-3 py-2 text-gray-500 hover:text-[#0e141b] transition-colors text-xs"
-          >
-            {text}
-          </a>
-        </li>
-      ))
-    }
+    {socialLinks.map((link: { text: string; href: string }) => (
+      <li>
+        
+          href={link.href}
+          target="_blank"
+          class="inline-block px-3 py-2 text-gray-500 hover:text-[#0e141b] transition-colors text-xs"
+        >
+          {link.text}
+        </a>
+      </li>
+    ))}
   </ul>
   <p class="text-xs text-gray-400">{author} © {currentYear}</p>
 </footer>
